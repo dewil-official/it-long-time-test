@@ -24,8 +24,6 @@ Dies ist der Lernzettel für die IT Klausur - Basierend auf dem herausgegebenen 
 | 🔁          | Kurze *Zusammenfassung*.                                     |
 | 💫          | *Zusatzinfos*, die beim Verständnis helfen können, aber nicht notwendig sind. |
 
-
-
 ## 🏐 Objektorientierte Programmierung <a name="kap1"></a>
 
 Java ist eine der größten sogenannten *Objektorientierten Programmiersprachen* und Greenfoot verwendet Java als Programmiersprache. Deshalb ist es wichtig, überhaupt zu verstehen, womit wir arbeiten.
@@ -46,7 +44,7 @@ Es gibt eine Klasse namens *Auto*. In der Klasse ist festgelegt, dass alle Autos
 
 Dann wird das Programm ausgeführt und ein *Auto* wird erzeugt. Dieses spezielle *Auto* ist jetzt also gebaut worden und existiert jetzt als *Objekt*. Dieses Auto bekommt die *Marke* "Lada" zugewiesen und es soll drei Mal *fahren*, diese Funktion wird also 3 Mal ausgeführt.
 
-### 💫Advanced Stuff
+### 💫 Advanced Stuff
 
 Viele Programmiersprachen unterstützen außerdem das Konzept der *Vererbung*. So kann man in Java Beispielsweise eine Klasse "Auto" erstellen und die Klasse "VW" erbt dann alle Eigenschaften und Funktionen der "Auto"-Klasse, wird aber z.B. um die Eigenschaften "Modell" und "PS" erweitert.
 
@@ -128,7 +126,7 @@ Bei der Erstellung muss mithilfe eines **Zugriffsmodifikators** festgelegt werde
 | `private`      | Sichtbar innerhalb der eigenen Klasse.              |
 | `protected`    | Sichtbar für das Programmpaket und alle Subklassen. |
 
-### 💫Modifikatoren
+### 💫 Modifikatoren
 
 Abseits der Zugriffsmodifikatoren können sogenannte **Nicht-Zugriffs Modifikatoren** festgelegt werden.
 
@@ -152,8 +150,94 @@ Bei der Erstellung von **Variablen** muss der Typ festgelegt werden, also was ge
 | ❕`float`   | `3.4e−038` bis `3.4e+038`                          | Speichern von Kommazahlen.                                   |
 | `double`   | `1.7e−308` bis `1.7e+038`                          | Speichern von sehr kleinen Kommazahlen.                      |
 | `char`     | Buchstabe / Zeichen                                | Speichern einzelner Buchstaben / Zeichen.                    |
-| ❕`String`  | `Array` mehrerer `char`'s                          | Speichern von längeren Sätzen oder Wörtern.                  |
+| ❕`String`  | Sequenz mehrerer `char`'s                          | Speichern von längeren Sätzen oder Wörtern.                  |
 | `[]`       | `Array` enthält *Variablen, Objekte, Arrays, etc.* | Speichern beliebiger Daten an einem Ort. Kann gut durch Loops erstellt und abgerufen werden. |
+
+### 💫 Arrays
+
+Ein Array ist eine **Liste von Objekten** (Also auch Variablen). Man nutzt dabei die `[ ]` wie folgt:
+
+```java
+// Erstelle eine Liste von Integers
+int zahlen[] = {128,1,29,-69};
+
+// Zugriff auf die 2. Zahl im Array:
+// WICHTIG: Der Array-Index startet bei 0. Also ist das 0te Item das erste, das 1te ist das zweite etc.
+System.out.println(zahlen[1]); // Gibt "1" aus.
+```
+
+### Funktionen / Methoden
+
+Eine **Funktion** ist ein Codeabschnitt, der separat abgespeichert wird, damit er einfacher mehrmals ausgeführt werden kann. Eine Funktion erfüllt normalerweise immer einen bestimmten Zweck.
+
+Beispiel: Überprüfe etwas. Oder setze mehrere Variablen zurück.
+
+```java
+// Eine Variable
+int eineZahl = 16;
+
+// Funktion definieren
+public void neueZahl() {
+    eineZahl = 10;
+}
+
+// Funktion ausführen
+neueZahl();
+```
+
+Funktionen werden in Java **Methoden** genannt und gehören immer zu *der Klasse / dem Objekt* in dem sie definiert wurden.
+
+### Rückgabetypen
+
+Am einfachsten lassen sich **Rückgabetypen** anhand einer Funktion erklären:
+
+```java
+boolean isValid = checkValid(3);
+```
+
+Hier soll überprüft werden, ob die Zahl 3 "valide" ist (was immer das hier heißen mag). Dazu wird die Funktion `checkValid()` mit dem Parameter *3* ausgeführt, diese **gibt dann etwas zurück**.
+
+Die Funktion `checkValid()` könnte so aussehen:
+
+```java
+public boolean checkValid(int input) {
+    if (input >= 2) {
+        return true;
+    } else {
+        return false;
+    }
+}
+```
+
+Lässt man sich das Ergebnis von `checkValid(3)` ausgeben, so gibt die Konsole `true` aus.
+
+Statt `boolean` lassen sich auch beliebige andere Datentypen verwenden. Gibt es keinen Rückgabetyp, muss `void` verwendet werden. Gibt es einen, muss `return` dann eine Antwort zurückgeben. Jeder Parameter muss in der Klammer mit Datentyp angegeben werden. Argumente werden per Komma getrennt.
+
+### 💫 Scope
+
+Der **Scope** legt fest, zu welchem Objekt bzw. welcher Klasse die *Variablen und Methoden* gehören. Das wird festgelegt, je nach dem wo der Code geschrieben steht.  Beispiel:
+
+```java
+public world() {
+    int globalCounter = 0;
+    
+    public void starteLevel() {
+        // Erstelle die Variable "gestartet" und setze sie auf "true"
+        boolean gestartet = true;
+        globalCounter++;
+    }
+    
+    public void beendeLevel() {
+        globalCounter++;
+    }
+}
+```
+
+- Die Variable `globalCounter` gehört zu `world()` und ist außerhalb nicht verfügbar.
+- Sowohl `starteLevel()` als auch `beendeLevel()` können auf `globalCounter` zugreifen und diesen erhöhen.
+- `gestartet` gehört zu `starteLevel()` und ist außerhalb nicht verfügbar. `beendeLevel()` kennt die Variable nicht.
+
+🔁 **Zusammenfassend** gibt es eine klare Hierarchie und erstellte *Objekte, Methoden und Variablen* können immer nur in derselben oder einer tieferen Ebene genutzt werden.
 
 ### Beispiel
 
@@ -204,7 +288,7 @@ ergebnis = (6+3)*2-1;
 System.out.println("Ergebnis: " + ergebnis);
 
 // Eine weitere Rechnung:
-double einViertel = 1/4;
+double einViertel = 1.00/4; // Die Zahl der Nachkommestellen muss hier schon festgelegt werden.
 double zweiViertel = 1*0.5;
 
 // Ausgabe:
