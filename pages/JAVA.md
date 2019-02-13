@@ -9,7 +9,7 @@ Dies ist der Lernzettel für die IT Klausur - Basierend auf dem herausgegebenen 
 3. [🎢 Java Grundlagen](#kap3)
 4. [🎰 Datentypen](#kap4)
 5. [👨‍💻 Rechnen mit Variablen](#kap5)
-6. 🔩 Klassen und Objekte
+6. [🔩 Klassen und Objekte](#kap6)
 7. 🔗 Bedingungen
 8. 🌠 Schleifen
 9. 🐫 Ausgaben
@@ -94,8 +94,6 @@ public class HelloWorld
   - Sie heißt *"main"*
   - Der *"(String[] args)"*-Parameter kann weitere Argumente beim Ausführen an die Funktion weitergeben, d.h. wenn das Programm in der Konsole mit "helloworld.exe -f -j" gestartet wird, ist die Variable "args" gleich ['-f','-j'], also ein Array aus mehreren Strings.
   - In der Funktion wird der Befehl *System.out.println("Hello World!");* ausgeführt, der einfach *Hello World* in der Konsole ausgibt.
-
- 
 
 ### Syntax
 
@@ -293,5 +291,64 @@ double zweiViertel = 1*0.5;
 
 // Ausgabe:
 System.out.println("einViertel: " + einViertel + " zweiViertel: " + zweiViertel);
+
+// Wiederverwendung einer alten Variable:
+ergebnis = ergebnis + 18;
+System.out.println("Neues Ergebnis: " + ergebnis);
+
+// Direktes Rechnen in der Ausgabe:
+System.out.print("Drittes Ergebnis: ");
+System.out.println(ergebnis * 123);
 ```
+
+### Output
+
+In der **Konsole**, die dann aufgeht, steht dafür folgendes:
+
+```
+Ergebnis: 17
+einViertel: 0.25 zweiViertel: 0.5
+Neues Ergebnis: 35
+Drittes Ergebnis: 4305
+```
+
+## 🔩 Klassen und Objekte <a name="kap6"></a>
+
+Wie im Kapitel [Objektorientierte Programmierung](#kap1) erklärt, gibt es in Java sogenannte **Klassen und Objekte**, wie diese Konzepte in Java umzusetzen sind, lässt sich wieder anhand eines Beispiels anschaulich erklären:
+
+### Beispiel
+
+```java
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+public class ExampleWorld extends World
+{
+    // Variable:
+    int zufall = 0;
+    
+    // Konstruktor für ExampleWorld:
+    public ExampleWorld()
+    {
+        // Setze die Weltgröße für Greenfoot>World
+        super(600, 400, 1); 
+        
+        // Setze "zufall" auf irgendwas
+        zufall++;
+        
+        // Die Methode wird ausgeführt:
+        outputLol();
+    }
+    
+    // Zusätzliche Methode:
+    public void outputLol() {
+        System.out.println("Lol.");
+    }
+}
+```
+
+- *Importiere* alle verfügbaren Klassen von Greenfoot, in diesem Fall wird vor allem die *Welt*-Klasse gebraucht
+- `public class ExampleWorld extends World` erstellt eine neue Welt, die aus der Oberklasse `World` erbt. Die Oberklasse stammt aus dem importierten Greenfoot-Paket.
+- Die Variable `zufall` wird in der Klasse erstellt, aber sobald aus der Klasse ein Objekt erstellt wird (Sobald der Bauplan gebaut wird), wird die Variable erhöht:
+- Der Konstruktor `public ExampleWorld()` wird ausgeführt, sobald ein `ExampleWorld()`-Objekt erstellt wird.
+- Die Methode `outputLol()` wird ohne [Rückgabetyp](#kap4) erstellt und im Konstruktor ausgeführt.
 
