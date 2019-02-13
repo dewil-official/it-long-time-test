@@ -11,7 +11,7 @@ Dies ist der Lernzettel für die IT Klausur - Basierend auf dem herausgegebenen 
 5. [👨‍💻 Rechnen mit Variablen](#kap5)
 6. [🔩 Klassen und Objekte](#kap6)
 7. [🔗 Bedingungen](#kap7)
-8. 🌠 Schleifen
+8. [🌠 Schleifen](#kap8)
 9. 🐫 Ausgaben
 10. ✨ Sauberen Code schreiben!
 11. 👓 Übungsaufgaben
@@ -411,4 +411,44 @@ if(((7 > 5) && (8 > 5)) || (5 < 3)) {
 
 ### If, Else und Switches
 
-[Fortsetzung folgt...]
+**Verzweigungen** erlauben nach der Prüfung einer Bedingung, zu entscheiden, ob Code ausgeführt werden soll. Es gibt dazu folgende Befehle:
+
+| Code             | Beschreibung                                                 |
+| ---------------- | ------------------------------------------------------------ |
+| `if (Bedingung)` | Wenn die Bedingung zutrifft wird der nachfolgende Code ausgeführt.<br />Der Code kann entweder danach in derselben Zeile stehen, oder zwischen `{ }` |
+| `else`           | Kann nach den `{ }` eines `if`-Blocks stehen und wird ausgeführt,<br />wenn dieser nicht ausgeführt wurde. |
+| `else if`        | Wird ausgeführt, wenn der vorherige `if`-Block nicht ausgeführt wurde.<br />Besonders hilfreich in einer Verkettung aus mehreren Bedingungen. |
+| 💫`switch (var)`  | Kann viele Möglichkeiten für die Variable in Klammern durchgehen.<br />Format: `switch (var) { case 1: code1(); case 2: code2(); }`<br />Wenn `var == 1` dann wird `code1()` ausgeführt. |
+
+Das kann so aussehen:
+
+```java
+// Einzeilige If-Bedingung
+if (schalter == true) schalteEsAb();
+
+// Mehrzeilige If-Bedingung
+if (a > 1 || a < 0) {
+    b++;
+}
+
+// Mehrere Möglichkeiten durch If / Else
+if (unterkurs.vorhanden >= 1) {
+    sammleUnterkurse();
+} else if (unterkurs.vorhanden == 0) {
+    glueckwunsch();
+} else {
+    System.out.println("Error!");
+}
+
+// Viele Möglichkeiten einer Variable
+switch (monat) {
+    case 1: monatName = "Januar";
+    case 2: monatName = "Februar";
+    case 3: monatName = "März";
+    // Und so weiter...
+}
+```
+
+## 🌠 Schleifen <a name="kap8"></a>
+
+[...]
