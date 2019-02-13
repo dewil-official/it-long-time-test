@@ -12,9 +12,9 @@ Dies ist der Lernzettel für die IT Klausur - Basierend auf dem herausgegebenen 
 6. [🔩 Klassen und Objekte](#kap6)
 7. [🔗 Bedingungen](#kap7)
 8. [🌠 Schleifen](#kap8)
-9. 🐫 Ausgaben
-10. ✨ Sauberen Code schreiben!
-11. 👓 Übungsaufgaben
+9. [🐫 Ausgaben](#kap9)
+10. [✨ Sauberen Code schreiben!](#kap10)
+11. [👓 Übungsaufgaben](#kap11)
 
 ### Legende
 
@@ -451,4 +451,114 @@ switch (monat) {
 
 ## 🌠 Schleifen <a name="kap8"></a>
 
-[...]
+Ein weiterer wichtiger Bestandteil der Programmierung ist es, Codeabfolgen wiederholen zu können. Das spart Code und ermöglicht u.a. erst Spiele.
+
+### Arten von Schleifen
+
+##### While-Schleife
+
+```java
+while ( Bedingung ) {
+    // Ausführbarer Code
+}
+```
+
+Die *While-Schleife* ist im Grunde nur ein If-Block, der am Ende wieder zum Anfang springt und die Bedingung prüft etc...
+
+##### For-Schleife
+
+```java
+for(a = 0; a<= 60; a++) {
+	// Ausführbarer Code
+} 
+```
+
+Die *For-Schleife* ist wie eine While-Schleife, die automatisch zwei Code-Blöcke ausführt. Das sieht so aus:
+
+`(Start-Code; Bedingung; End-Code)`
+
+- Der `Start-Code` wird einmal als erstes beim Erreichen der Schleife ausgeführt.
+- Die `Bedingung` funktioniert wie bei der *If-Schleife*.
+- Der `End-Code` wird nach jedem Durchlauf des *Ausführbaren Codes* ausgeführt.
+
+In der Praxis wird das meistens verwendet, um einen **Counter** zu haben, der den Code eine bestimmte Häufigkeit lang ausführt.
+
+## 🐫 Ausgaben <a name="kap9"></a>
+
+##### Konsolenausgabe
+
+- `System.out.println()` gibt den Text in Klammern in die Konsole aus und erstellt dann eine neue Zeile.
+- `System.out.print()` gibt den Text in Klammern in die Konsole aus, ohne neue Zeile.
+
+##### 💫 Systempakete
+
+In Java werden Programme in sogenannte **Pakete** unterteilt. Einige Pakete gibt es immer wie `System` und `Java`. In Greenfoot wird auch z.B. das Paket `Greenfoot` importiert.
+
+Deshalb heißt auch der Befehl zur Konsolenausgabe `System.out.print()`, er gehört zum `System`-Paket, in diesem Paket gibt es ein `out`-Paket, das wiederum für Ausgaben zuständig ist.
+
+Pakete sind übrigens auch nichts anderes als **Objekte**. Man kann auf Objekt-Eigenschaften genauso zugreifen: `Objekt.Eigenschaft = 0;`
+
+## ✨ Sauberen Code schreiben! <a name="kap10"></a>
+
+`💫 Dieses Kapitel ist zu 100% optional!`
+
+**Sauberen** Code zu schreiben ist wichtig!
+
+**Sauber** ist der Code dann, wenn er einfach zu lesen ist. Außerdem sollte er keine Logikfehler und Bugs haben.
+
+Man sollte Code möglichst **sauber** halten, damit er einfacher zu verstehen, dadurch weniger Fehleranfällig und im Zweifel auch performanter ist. Mit gutem Code lässt sich auch einfacher arbeiten. Deswegen gibt es in diesem Kapitel ein paar Beispiele und Ideen, wie guter Code zu schreiben ist.
+
+### Namen sinnvoll wählen!
+
+Ein Beispiel: Eine Variable, die speichern soll, **ob** das Programm **aktiv** ist, könnte `akt` heißen. Aber jemand, der das Programm nicht geschrieben hat, wüsste nicht auf Anhieb, was diese Variable enthält.
+
+Stattdessen könnte man diese Variable `isActive` nennen. Die `is`-Vorsilbe zeigt sofort, dass es sich um ein `boolean` handelt und `Active` ist eindeutig zu verstehen.
+
+Zweites Beispiel: Eine **Klasse**, die allen *dämonischen* Welten übergeordnet ist, heißt `DämonenKlasse`.
+
+Aber aus diesem Namen geht nicht hervor, dass es sich um Welten handelt. Außerdem sollte *Klasse*, also der Datentyp, nicht direkt in den Namen. Zuletzt programmiert man immer auf *Englisch*, Java lässt also einen Klassennamen mit einem `ä` gar nicht zu, das sollte generell vermieden werden.
+
+Besser wäre hier: `UnterWelten` oder `DaemonWorlds`
+
+### Gute Formattierung!
+
+Folgende Regeln könnten dir helfen:
+
+- Rücke Inhalte in geschweiften Klammern immer ein!
+- Halte auch mal einen Absatz Freiraum zwischen den Zeilen für bessere Struktur.
+- Halte dich an deine eigenen Regeln! Wenn Du z.B. gerne `( a > b )` schreibst statt `(a>b)`, dann zieh das durch! Bleibe konsequent.
+- Fasse dich kurz. Der eigentliche Code sollte immer kurz und übersichtlich sein.
+
+##### Beispiel für schlechten Code
+
+```java
+if (  a==32)
+{
+lol(); raaaad(25)}
+			System.out.println("Fertig!");
+```
+
+##### Beispiel für guten Code
+
+```java
+if ( a >= 3 ) {
+    resetValues();
+} else {
+    System.out.println("A ist kleiner als 3!");
+}
+```
+
+### Kommentare
+
+```java
+// Einzeiliger Kommentar
+
+/*
+	Mehrzeiliger Kommentar
+*/
+```
+
+**Nutze sie!** Nicht jede Zeile muss kommentiert werden, aber zu beschreiben, wie Du ein bestimmtes Problem gelöst hast, ist wichtig! Du selbst wirst diesen Code dadurch sehr viel einfacher lesen können, genauso wie alle anderen Leute, die deinen Code lesen.
+
+## 👓 Übungsaufgaben <a name="kap11"></a>
+
