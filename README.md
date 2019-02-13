@@ -6,5 +6,5 @@
 
 Hier auf GitHub hoste ich den Lernzettel für die IT-Langzeitklausur. Du kannst das gesamte Repository herunterladen und die Codebeispiele zum Lernen selbst verwenden. Den eigentlichen Lernzettel findest Du hier:
 
-[Lernzettel - Übersicht](change me)
+[Lernzettel - Übersicht](pages/OVERVIEW.md)
 
