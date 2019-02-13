@@ -15,6 +15,7 @@ Dies ist der Lernzettel für die IT Klausur - Basierend auf dem herausgegebenen 
 9. [🐫 Ausgaben](#kap9)
 10. [✨ Sauberen Code schreiben!](#kap10)
 11. [👓 Übungsaufgaben](#kap11)
+12. [🎀 Lösungen](#kap12)
 
 ### Legende
 
@@ -561,4 +562,31 @@ if ( a >= 3 ) {
 **Nutze sie!** Nicht jede Zeile muss kommentiert werden, aber zu beschreiben, wie Du ein bestimmtes Problem gelöst hast, ist wichtig! Du selbst wirst diesen Code dadurch sehr viel einfacher lesen können, genauso wie alle anderen Leute, die deinen Code lesen.
 
 ## 👓 Übungsaufgaben <a name="kap11"></a>
+
+### Kurzaufgaben
+
+##### 1. "Die magische Konsole" 📋
+
+- Erstelle ein neues Greenfoot-Projekt und benenne die Welt um.
+- Erstelle in dieser Welt eine neue Methode, die die Konsole starten soll.
+- Diese Methode soll im Konstruktor der Welt ausgeführt werden.
+- Nutze den Befehl `System.out.println()`, um 30x abwechselnd "a" und "b" in die Konsole auszugeben.
+
+### Projektaufgaben
+
+...
+
+### Finde-den-Fehler
+
+...
+
+## 🎀 Lösungen <a name="kap12"></a>
+
+### Kurzaufgaben & Projektaufgaben
+
+**Musterlösungen** findest Du [hier](../java/lösungen)! (Auf meinem GitHub)
+
+### Finde-den-Fehler
+
+...
 
