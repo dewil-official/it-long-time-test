@@ -10,7 +10,7 @@ Dies ist der Lernzettel für die IT Klausur - Basierend auf dem herausgegebenen 
 4. [🎰 Datentypen](#kap4)
 5. [👨‍💻 Rechnen mit Variablen](#kap5)
 6. [🔩 Klassen und Objekte](#kap6)
-7. 🔗 Bedingungen
+7. [🔗 Bedingungen](#kap7)
 8. 🌠 Schleifen
 9. 🐫 Ausgaben
 10. ✨ Sauberen Code schreiben!
@@ -352,3 +352,63 @@ public class ExampleWorld extends World
 - Der Konstruktor `public ExampleWorld()` wird ausgeführt, sobald ein `ExampleWorld()`-Objekt erstellt wird.
 - Die Methode `outputLol()` wird ohne [Rückgabetyp](#kap4) erstellt und im Konstruktor ausgeführt.
 
+## 🔗 Bedingungen <a name="kap7"></a>
+
+In der Programmierung ist es wichtig, **entscheiden zu können**, was passieren soll. Zum Beispiel innerhalb von *If-Blöcken* kann einfach die Ausführung eines Blocks an eine **Bedingung** geknüpft werden.
+
+### Bedingungen
+
+Das Ergebnis einer Bedingung muss immer `wahr` oder `falsch` sein. Eine Funktion kann nicht zu 50% ausgeführt werden - Entweder sie wird ausgeführt oder nicht.
+
+Die einfachste Bedingung lautet daher: `(true)` oder `(false)`. Beispiel:
+
+```java
+while (true) {
+    // Code
+}
+```
+
+Dies ist ein einfacher, unendlicher Loop. Jedes etwas ältere Spiel hat einen solchen Loop.
+
+Um solche Entscheidungen auch Dynamisch zu treffen, kann eine Reihe von Überprüfungen angewandt werden. Das Ergebnis ist immer `true` oder `falsch`:
+
+| Operator | Funktionsweise          |
+| -------- | ----------------------- |
+| `<`      | `A` Kleiner als `B`     |
+| `>`      | `A` Größer als `B`             |
+| `<=`     | `A` Kleiner oder Gleich als `B` |
+| `>=`     | `A` Größer oder Gleich als `B`  |
+| `==`     | `A` Genau gleich wie `B`        |
+| `!=`     | `A` Nicht gleich wie `B`        |
+
+Das kann beispielsweise so aussehen:
+
+```java
+if (a < 15) {
+    // Mache etwas
+}
+```
+
+Man kann auch mehrere Bedingungen miteinander verknüpfen:
+
+- `||` ist gleich *oder*, es wird aktiv wenn eine der Bedingungen wahr ist.
+- `&&` ist gleich *und*, es wird aktiv wenn beide Bedingungen wahr sind.
+- 💫 `!` kann jede Bedingung invertieren.
+
+Das kann dann so aussehen:
+
+```java
+if (3 <= 18 && true) {
+    // Bedingung ergibt "wahr" -> Code wird ausgeführt
+}
+
+if(((7 > 5) && (8 > 5)) || (5 < 3)) {
+    // Bedingung ergibt auch "wahr" -> Code wird ausgeführt
+    // Bedingungen können mit () eingegrenzt werden,
+    // sonst wird von vorne nach hinten geprüft.
+}
+```
+
+### If, Else und Switches
+
+[Fortsetzung folgt...]
