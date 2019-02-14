@@ -572,6 +572,14 @@ if ( a >= 3 ) {
 - Diese Methode soll im Konstruktor der Welt ausgeführt werden.
 - Nutze den Befehl `System.out.println()`, um 30x abwechselnd "a" und "b" in die Konsole auszugeben.
 
+##### 2. "Ninja-Baby" 🐱‍👤
+
+- Importiere die Vorlage aus dem [/java/vorlagen](../java/vorlagen) - Ordner!
+- Lasse das Baby vorwärts laufen.
+- Wenn das Baby die rechte Kante erreicht, soll es automatisch wieder nach links teleportiert werden. Du kannst die Positionen mit `getX()` oder `getY()` erhalten und die Position mit `setLocation(x, y)` setzen.
+- Anstatt sich zu teleportieren, soll sich das Baby jetzt mit `turn(180)` gedreht werden und denselben Weg wieder an die linke Bildschirmkante zurück laufen. Dort soll es sich wieder drehen und normal laufen etc.
+- Wenn das Baby von rechts nach links läuft, soll die Geschwindigkeit stark erhört werden.
+
 ### Projektaufgaben
 
 ...
