@@ -5,6 +5,6 @@
 Hier geht's zu den einzelnen Kapiteln:
 
 1. [Java](JAVA.md)
-2. [Netzwerktechnik](change me)
-3. [Filius Netzwerke](change me)
+2. [Netzwerktechnik](NETZWERKE.md)
+3. [Filius Netzwerke](FILIUS.md)
 
