@@ -580,6 +580,13 @@ if ( a >= 3 ) {
 - Anstatt sich zu teleportieren, soll sich das Baby jetzt mit `turn(180)` gedreht werden und denselben Weg wieder an die linke Bildschirmkante zurück laufen. Dort soll es sich wieder drehen und normal laufen etc.
 - Wenn das Baby von rechts nach links läuft, soll die Geschwindigkeit stark erhört werden.
 
+##### 3. "Synchronität" 🔢
+
+- Erstelle ein neues Greenfoot-Projekt und einen neuen Actor.
+- Diese Actorklasse soll später mehrfach als Objekt platziert werden. Die verschiedenen Objekte sollen später auch verschiedene Dinge tun, aber in einem Muster. Als erstes soll sich dazu dein Actor in einem Rechteck bewegen: Er soll sich bei jedem Act mithilfe von `move(x)` bewegen und alle 30 act()'s die Richtung um 90° mithilfe von `turn(90)` ändern.
+- Platziere den Actor 4x in der Mitte deiner Welt und speichere die Welt mit einem Rechtsklick ins Fenster.
+- Für jede der 4 Richtungen, in die sich der Actor bewegt, soll er eine andere Textur erhalten. Nutze dafür `setImage("textur.png");`
+
 ### Projektaufgaben
 
 ...
