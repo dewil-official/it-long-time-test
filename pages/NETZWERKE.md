@@ -4,11 +4,12 @@ Dies ist der Lernzettel für die IT Klausur, basierend auf dem letzten Lernzette
 
 ## Inhalt
 
-1. [Wdhl. Zahlensysteme](#kap1)
-2. [Das OSI-Modell](#kap2)
-3. [IP-Adressen und Subnetze](#kap3)
+1. 🔢 [Wdhl. Zahlensysteme](#kap1)
+2. 🏗 [Das OSI-Modell](#kap2)
+3. 🗓 [IP-Adressen und Subnetze](#kap3)
+4. 📑 [Protokolle](#kap4)
 
-## Zahlensysteme (Wdhl.) <a name="kap1"></a>
+## 🔢 Zahlensysteme (Wdhl.) <a name="kap1"></a>
 
 **Zahlen** werden heutzutage an jeder Ecke verwendet, wenn eine Menge oder ein Wert *fest definiert*
 werden muss. Im Alltag verwenden wir normalerweise das **Dezimalsystem**, in dem genau **Zehn
@@ -47,7 +48,7 @@ Umrechnungen kann man sich meist **sehr vereinfachen** und da wir am PC
 schreiben, bietet sich die Verwendung des **Windows-Taschenrechners** an.
 Dieser hat im Tab „Programmieren“ eine Umrechnungsfunktion eingebaut.
 
-## Das OSI-Modell <a name="kap2"></a>
+## 🏗 Das OSI-Modell <a name="kap2"></a>
 
 Das *„Open Systems Interconnection Model“* ist ein **Referenzmodell**, das seit 1984 durch die ISO
 (International Organization for Standardization) anerkannt wurde. Es stellt die **Netzwerkprotokolle
@@ -84,7 +85,7 @@ werden. So sieht es aus:
 | 2 **Sicherung**     | Soll die Verbindung absichern, indem 3.-Schicht Daten in "Frames" also **kleinere Blöcke** geteilt und durch "[Prüfsummen](https://www.it-talents.de/blog/it-talents/was-sind-pruefsummen-checksums)" **mathematisch abgesichert** werden. |
 | 1 **Physisch**      | Kabelverbindungen oder "dumme" Geräte, denen die gesendeten Daten egal sind. |
 
-## IP-Adressen und Subnetze  <a name="kap3"></a>
+## 🗓 IP-Adressen und Subnetze  <a name="kap3"></a>
 
 ##### Aufbau
 
@@ -169,3 +170,22 @@ Diese Subnetzmasken werden in grobe Klassen unterteilt: Klasse A, B und C.
 
 Bedenke, dass zum Beispiel 255.192.0.0 z.B. noch als Klasse A gelten würde, das dann nur weiter
 eingeteilt wurde. 255.255.128.0 würde zu Klasse B gehören etc.
+
+## 📑 Protokolle <a name="kap4"></a>
+
+Um in einem Netzwerk kommunizieren zu können, gibt es mehrere **Netzwerkprotokolle**, die das Format bestimmen, also *wie* die Daten übermittelt werden.
+
+Eine Übersicht aller wichtigen Protokolle des OSI-Modells gibt es hier:
+
+| Name  | OSI-Schicht     | Zweck                                                | Schaubild / Erklärung                                        |
+| ----- | --------------- | ---------------------------------------------------- | ------------------------------------------------------------ |
+| IP    | 3 - Vermittlung | Etikettierung von Paketen                            | ![ip_protocol](..\img\ip_protocol.jpg)                       |
+| ICMP  | 3 - Vermittlung | Grundfunktionen                                      | Ermöglicht u.a. Befehle wie *Ping und Traceroute*            |
+| TCP   | 4 - Transport   | Zuverlässiger Datenaustausch                         | Datenpakete werden vom Empfänger bestätigt, bevor die nächsten Daten gesendet werden. (Wird z.B. für Web genutzt) |
+| UDP   | 4 - Transport   | Schneller Datenaustausch                             | Datenpakete werden "drauf los" zum Empfänger gesendet, ob die Verbindung noch besteht muss zusätzlich geprüft werden (z.B. in Spielen) |
+| DHCP  | 5-7             | Vergabe von IPs                                      | ![ip_protocol](..\img\dhcp_protocol.png)                     |
+| DNS   | 5-7             | Auflösen von Domains, z.B. von "google.de"           | ![ip_protocol](..\img\dns_protocol.jpg)                      |
+| HTTP  | 5-7             | Übertragen von Websites                              | ![ip_protocol](..\img\http_protocol.gif)                     |
+| HTTPS | 5-7             | Sicheres und Verschlüsseltes übertragen von Websites | ![ip_protocol](..\img\https_protocol.png)                    |
+| FTP   | 5-7             | Übertragen von Dateien                               | Wird u.a. verwendet um auf das Dateisystem eines Servers zuzugreifen. z.B. wenn man bei Nitrado einen Gameserver mietet. |
+
