@@ -6,9 +6,9 @@ Die Lernsoftware **Filius** dient der Visualisierung von Netzwerken und dessen K
 
 1. 🎨 [Interface](#kap1)
 2. 🎰 [Rechner](#kap2)
-3. 🔌 Switch
-4. 🔩 Router
-5. 🔗 Modem
+3. 🔌 [Switch](#kap3)
+4. 🔩 [Router](#kap4)
+5. 🔗 [Modem](#kap5)
 
 ## 🎨 Interface <a name="kap1"></a>
 
@@ -92,4 +92,47 @@ In diesem Beispiel wird über den Link `http://192.168.0.10/yey` die Website `we
     > index.html
     > awesome.html
 ```
+
+## 🔌 Switch <a name="kap3"></a>
+
+Der sogenannte **Switch** in Filius ermöglicht das Verbinden von vielen Geräten an dieselbe Leitung. An einen Switch kann eine nicht begrenzte Anzahl an Geräten angeschlossen werden, jede Verbindung selbst (per Kabel) ist aber trotzdem Ende-zu-Ende. Der Switch verteilt die Daten dann jeweils an die richtigen MAC-Adressen weiter.
+
+## 🔩 Router <a name="kap4"></a>
+
+Ein **Router** hat eine feste Anzahl an Anschlüssen, zwischen denen er dann vermitteln kann. In Filius heißen Router *"Vermittlungsrechner"*. Ein Router vermittelt zwischen mehreren Netzwerken, jeder der vorher konfigurierten Anschlüsse muss daher in einem anderen (Sub-)Netz liegen.
+
+##### Konfiguriation
+
+- Es gibt einen Haupttab, in dem *Name*, *Gateway*, *Firewall* und *Anschlüsse* konfiguriert werden können.
+  - Außerdem kann *Automatisches Routing* aktiviert werden, wenn es deaktiviert ist, tritt die *Weiterleitungstabelle* in Kraft. (Dazu unten mehr)
+- Für jeden Anschluss können folgende Einstellungen gemacht werden:
+
+| Name        | Wirkung                                                      |
+| ----------- | ------------------------------------------------------------ |
+| IP-Adresse  | Der Router ist in jedem Netz als Gerät verfügbar und kann von den dortigen Geräten als *Gateway* angegeben werden. Weil der Router als Gerät im Netz ist, braucht er für dieses Netz auch eine IP. |
+| Netzmaske   | Die Netzmaske des Netzwerks, damit feststeht, welche Geräte im Netz erreichbar sind. |
+| MAC-Adresse | *Kann nicht verändert werden.* - Ist nur wichtig, um z.B. Anfragen in Switches nachzuvollziehen. |
+
+##### Weiterleitungstabelle
+
+In dieser Tabelle können, wenn die Option *Automatisches Routing* deaktiviert ist, Weiterleitung über mehrere Netze hinweg eingestellt werden. Dies ist nützlich, wenn z.B. entferntere Netze sonst nicht angesteuert werden können, weil sie hinter mindestens einem weiteren Router liegen.
+
+Es kann folgendes eingestellt werden:
+
+| Ziel                                                         | Netzmaske               | Nächstes Gateway                                             | Über Schnittstelle                                         |
+| ------------------------------------------------------------ | ----------------------- | ------------------------------------------------------------ | ---------------------------------------------------------- |
+| IP-Adresse des Netzes (oder Gerätes), an das gesendet werden soll. | Subnetzmaske des Ziels. | Ein Router, an den die Daten weiter gesendet werden sollen, wenn sie zu dem "Ziel" sollen. | Die IP-Adresse des gewünschten Ausgangs am eigenen Router. |
+
+***Tipp:*** *Nimm den Haken bei "Alle Einträge anzeigen" heraus, um nur die wichtigen Einträge in der Tabelle zu sehen.*
+
+## 🔗 Modem <a name="kap5"></a>
+
+Ein **Modem** ist immer eine Brücke über das *reale Netzwerk* (Außerhalb von Filius) zu einer anderen Instanz zu Filius. Dazu muss im Modem folgendes angegeben werden:
+
+| Option                | Beschreibung                                                 |
+| --------------------- | ------------------------------------------------------------ |
+| Name                  | Dient der Übersichtlichkeit.                                 |
+| Auf Verbindung warten | Eins der beiden Modems muss diese Option aktivieren.<br />Dieses Modem wird zum "Host" und wartet auf die Verbindung. |
+| IP-Adresse            | Die **reale** IP-Adresse des PCs, auf dem Filius mit dem anderen Modem läuft. |
+| Port                  | Ein Port, auf den sich zwischen beiden Modems geeinigt wurde.<br />Dadurch können mehrere Modem-Verbindungen gleichzeitig bestehen. |
 
