@@ -179,13 +179,13 @@ Eine Übersicht aller wichtigen Protokolle des OSI-Modells gibt es hier:
 
 | Name  | OSI-Schicht     | Zweck                                                | Schaubild / Erklärung                                        |
 | ----- | --------------- | ---------------------------------------------------- | ------------------------------------------------------------ |
-| IP    | 3 - Vermittlung | Etikettierung von Paketen                            | ![ip_protocol](..\img\ip_protocol.jpg)                       |
+| IP    | 3 - Vermittlung | Etikettierung von Paketen                            | ![ip_protocol](../img/ip_protocol.jpg)                       |
 | ICMP  | 3 - Vermittlung | Grundfunktionen                                      | Ermöglicht u.a. Befehle wie *Ping und Traceroute*            |
 | TCP   | 4 - Transport   | Zuverlässiger Datenaustausch                         | Datenpakete werden vom Empfänger bestätigt, bevor die nächsten Daten gesendet werden. (Wird z.B. für Web genutzt) |
 | UDP   | 4 - Transport   | Schneller Datenaustausch                             | Datenpakete werden "drauf los" zum Empfänger gesendet, ob die Verbindung noch besteht muss zusätzlich geprüft werden (z.B. in Spielen) |
-| DHCP  | 5-7             | Vergabe von IPs                                      | ![ip_protocol](..\img\dhcp_protocol.png)                     |
-| DNS   | 5-7             | Auflösen von Domains, z.B. von "google.de"           | ![ip_protocol](..\img\dns_protocol.jpg)                      |
-| HTTP  | 5-7             | Übertragen von Websites                              | ![ip_protocol](..\img\http_protocol.gif)                     |
-| HTTPS | 5-7             | Sicheres und Verschlüsseltes übertragen von Websites | ![ip_protocol](..\img\https_protocol.png)                    |
+| DHCP  | 5-7             | Vergabe von IPs                                      | ![ip_protocol](../img/dhcp_protocol.png)                     |
+| DNS   | 5-7             | Auflösen von Domains, z.B. von "google.de"           | ![ip_protocol](../img/dns_protocol.jpg)                      |
+| HTTP  | 5-7             | Übertragen von Websites                              | ![ip_protocol](../img/http_protocol.gif)                     |
+| HTTPS | 5-7             | Sicheres und Verschlüsseltes übertragen von Websites | ![ip_protocol](../img/https_protocol.png)                    |
 | FTP   | 5-7             | Übertragen von Dateien                               | Wird u.a. verwendet um auf das Dateisystem eines Servers zuzugreifen. z.B. wenn man bei Nitrado einen Gameserver mietet. |
 
